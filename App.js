@@ -42,7 +42,7 @@ const TodoApp = () => {
   const deleteTodo = (id) => {
     setTodos(todos.filter((app) => app.id !== id));
   };
-
+  
   return (
     <View style={styles.container}>
     <SafeAreaView style={{ flex: 1 }}>
