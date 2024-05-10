@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { SafeAreaView } from 'react-native';
+import LocalGallery from './src/pages/LocalGallery';
+
 import {
   View,
   Text,
@@ -7,6 +10,13 @@ import {
   FlatList,
   StyleSheet,
 } from 'react-native';
+
+const images = [
+    require('./src/assets/images/other/chokr.jpg'),
+    // Add more image URIs as needed
+  ];
+
+
 
 const TodoApp = () => {
   const [todos, setTodos] = useState([]);
@@ -18,6 +28,8 @@ const TodoApp = () => {
       setText('');
     }
   };
+  
+
 
   const toggleTodo = (id) => {
     setTodos(
@@ -33,6 +45,10 @@ const TodoApp = () => {
 
   return (
     <View style={styles.container}>
+    <SafeAreaView style={{ flex: 1 }}>
+      <LocalGallery images={images} />
+    </SafeAreaView>
+      
       <TextInput
         style={styles.input}
         value={text}
