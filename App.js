@@ -11,8 +11,14 @@ import {
   StyleSheet,
 } from 'react-native';
 
+ 
+
 const images = [
     require('./src/assets/images/other/chokr.jpg'),
+    require('./src/assets/images/other/chokr1.jpg'),
+    require('./src/assets/images/users/profile.png'),
+    require('./src/assets/images/users/user4.jpg'),
+    
     // Add more image URIs as needed
   ];
 
@@ -29,7 +35,7 @@ const TodoApp = () => {
     }
   };
   
-
+  
 
   const toggleTodo = (id) => {
     setTodos(
@@ -56,7 +62,7 @@ const TodoApp = () => {
         placeholder="Add new text"
       />
       <TouchableOpacity style={styles.button} onPress={addTodo}>
-        <Text style={styles.buttonText}>Add App</Text>
+        <Text style={styles.buttonText}>Add text</Text>
       </TouchableOpacity>
       <FlatList
         data={todos}
